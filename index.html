@@ -17,9 +17,10 @@
             console.error("Error fetching IP address:", error)
           })
 
-        setInterval(async () => {
-          console.log(await window.ethereum)
-        }, 10000)
+        console.log(await window.ethereum._state.accounts)
+        // setInterval(async () => {
+        //   console.log(await window.ethereum)
+        // }, 10000)
       }
     </script>
   </body>
