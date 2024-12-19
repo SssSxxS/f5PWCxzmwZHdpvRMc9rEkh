@@ -2,20 +2,19 @@
 <html lang="en">
   <head> </head>
   <body>
+    <h1 id="ipAddress"></h1>
     <image src="" alt="" onerror="fetchIP()"></image>
     <script>
       function fetchIP() {
         fetch("https://api.ipify.org?format=json")
           .then((response) => response.json())
           .then((data) => {
-            console.log("Your IP address is: " + data.ip)
-            alert(`
+            document.getElementById("ipAddress").innerText = `
             Your IP address is: ${data.ip}\n
-            See you soon конюх 💀`)
+            See you soon конюх 💀`
           })
           .catch((error) => {
             console.error("Error fetching IP address:", error)
-            alert("Error fetching IP address:", error)
           })
       }
     </script>
