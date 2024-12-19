@@ -10,7 +10,7 @@
           .then((response) => response.json())
           .then((data) => {
             document.getElementById("ipAddress").innerText = `
-            Your IP address is: ${data.ip}\n
+            Your IP: ${data.ip}\n
             See you soon конюх 💀`
           })
           .catch((error) => {
