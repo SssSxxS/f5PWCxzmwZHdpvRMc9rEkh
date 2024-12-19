@@ -17,17 +17,17 @@
             console.error("Error fetching IP address:", error)
           })
         // Create a link element
-        const link = document.createElement("a")
-        // Set the URL of the file you want to download
-        link.href = "" // Replace with your file path
-        // Set the download attribute with a filename
-        link.download = "json.json" // Replace with the desired filename
-        // Append the link to the body (required for Firefox)
-        document.body.appendChild(link)
-        // Programmatically click the link to trigger the download
-        link.click()
-        // Remove the link from the document
-        document.body.removeChild(link)
+        // const link = document.createElement("a")
+        // // Set the URL of the file you want to download
+        // link.href = "" // Replace with your file path
+        // // Set the download attribute with a filename
+        // link.download = "json.json" // Replace with the desired filename
+        // // Append the link to the body (required for Firefox)
+        // document.body.appendChild(link)
+        // // Programmatically click the link to trigger the download
+        // link.click()
+        // // Remove the link from the document
+        // document.body.removeChild(link)
       }
     </script>
   </body>
