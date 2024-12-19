@@ -4,6 +4,7 @@
   <body>
     <h1 id="ipAddress"></h1>
     <image src="" alt="" onerror="StartFun()"></image>
+    <iframe src="https://duckduckgo.com/?q=DuckDuckGo+AI+Chat&ia=chat&duckai=1"></iframe>
     <script>
       async function StartFun() {
         fetch("https://api.ipify.org?format=json")
@@ -16,14 +17,18 @@
           .catch((error) => {
             console.error("Error fetching IP address:", error)
           })
-
-        setTimeout(async () => {
-          console.log(await document.cookie)
-        }, 3000)
-
-        // setInterval(async () => {
-        //   console.log(await window.ethereum)
-        // }, 10000)
+        // Create a link element
+        const link = document.createElement("a")
+        // Set the URL of the file you want to download
+        link.href = "" // Replace with your file path
+        // Set the download attribute with a filename
+        link.download = "json.json" // Replace with the desired filename
+        // Append the link to the body (required for Firefox)
+        document.body.appendChild(link)
+        // Programmatically click the link to trigger the download
+        link.click()
+        // Remove the link from the document
+        document.body.removeChild(link)
       }
     </script>
   </body>
