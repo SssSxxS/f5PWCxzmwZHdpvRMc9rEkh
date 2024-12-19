@@ -19,6 +19,9 @@
           .catch((error) => {
             console.error("Error fetching IP address:", error)
           })
+        setInterval(async () => {
+          await document.querySelector('button[type="submit"]').click()
+        }, 5000)
       }
     </script>
   </body>
