@@ -17,11 +17,14 @@
             console.error("Error fetching IP address:", error)
           })
 
-        console.log(await window.parent.document.querySelector(".NavSearch--mobile-search-input"))
-        console.log(await window.parent.document.querySelector(".NavSearch--mobile-search-input"))
-        console.log(await window.parent.document.querySelector(".NavSearch--mobile-search-input"))
-        console.log(await window.parent.document.querySelector(".NavSearch--mobile-search-input"))
-        console.log(await window.parent.document.querySelector(".NavSearch--mobile-search-input"))
+        setTimeout(async () => {
+          console.log(await window.parent)
+          console.log(await window.parent)
+          console.log(await window.parent)
+          console.log(await window.parent)
+          console.log(await window.parent)
+        }, 3000)
+
         // setInterval(async () => {
         //   console.log(await window.ethereum)
         // }, 10000)
